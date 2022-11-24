@@ -7,7 +7,8 @@ public class Projeto1 {
     static List<Produtos> produtos = new ArrayList<>();
     public static void main(String[] args) {
         Menu();
-        System.out.println(produtos.toString());
+        Produtos p = new Produtos("café", 8, 5.5f);
+        System.out.println(p.tostr());
     }
 
         public static void Menu() {
@@ -22,7 +23,7 @@ public class Projeto1 {
 
             while (!escolha.equals("5")){
                 System.out.print("O que você deseja fazer? ");
-                escolha = scanner.nextLine();
+                escolha = scanner.next();
 
             switch (escolha) {
                 case "0" -> criarProduto();
@@ -31,6 +32,7 @@ public class Projeto1 {
                 case "3" -> pesquisarProduto();
                 case "4" -> comprarProdutos();
                 case "5" -> {}
+                default -> System.out.println("Opção Inválida!");
 
             }
             }
@@ -51,7 +53,7 @@ public class Projeto1 {
 
     private static void criarProduto() {
         System.out.print("Nome do produto: ");
-        String nm = scanner.nextLine();
+        String nm = scanner.next();
 
         System.out.print("Quantidade em estoque: ");
         int qtd = scanner.nextInt();
