@@ -8,4 +8,8 @@ public class Produtos {
         this.quantidade = quantidade;
         this.preco = preco;
     }
+
+    public String tostr(){
+        return nome + " " + quantidade + " " + preco;
+    }
 }
