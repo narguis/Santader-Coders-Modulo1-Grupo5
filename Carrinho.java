@@ -1,26 +1,24 @@
-
-public class Produtos {
+public class Carrinho {
     String nome;
     int quantidade;
-    float preco;
+    float valor;
 
-    public Produtos(String nome, int quantidade, float preco) {
+    public Carrinho(String nome, int quantidade, float valor) {
         this.nome = nome;
         this.quantidade = quantidade;
-        this.preco = preco;
+        this.valor = valor;
     }
-
     public String getNome() {
         return nome;
     }
     public Integer getQuantidade() {
         return quantidade;
     }
-    public Float getPreco() {
-        return preco;
+    public Float getValor() {
+        return valor;
     }
-    void setPreco (float preco) {
-        this.preco = preco;
+    void setValor (float valor) {
+        this.valor = valor;
     }
     void setNome (String nome) {
         this.nome = nome;
